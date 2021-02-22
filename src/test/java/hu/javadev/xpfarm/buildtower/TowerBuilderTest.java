@@ -43,4 +43,17 @@ public class TowerBuilderTest {
         assertThat(tower).containsExactly("*");
     }
 
+    @Test
+    @DisplayName("given two levels tower list should have two elements")
+    void givenTwoLevels_build_shouldReturnTwoSizeList() {
+        // given
+        int numberOfLevels = 2;
+
+        // when
+        List<String> tower = towerBuilder.build(numberOfLevels);
+
+        // then
+        assertThat(tower).hasSize(2);
+    }
+
 }
