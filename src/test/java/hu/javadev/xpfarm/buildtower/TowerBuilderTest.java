@@ -69,4 +69,17 @@ public class TowerBuilderTest {
         assertThat(tower).containsExactly(" * ", "***");
     }
 
+    @Test
+    @DisplayName("given three levels tower list should contain correct levels")
+    void givenThreeLevels_build_shouldReturnTwoLevelTower() {
+        // given
+        int numberOfLevels = 3;
+
+        // when
+        List<String> tower = towerBuilder.build(numberOfLevels);
+
+        // then
+        assertThat(tower).containsExactly("  *  ", " *** ", "*****");
+    }
+
 }
