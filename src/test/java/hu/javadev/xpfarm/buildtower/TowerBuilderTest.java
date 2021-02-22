@@ -1,6 +1,7 @@
 package hu.javadev.xpfarm.buildtower;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class TowerBuilderTest {
     }
 
     @Test
+    @DisplayName("given one level tower list should have one element")
     void givenOneLevel_build_shouldReturnOneSizeList() {
         // given
         int numberOfLevels = 1;
