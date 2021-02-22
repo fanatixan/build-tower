@@ -3,6 +3,8 @@ package hu.javadev.xpfarm.buildtower;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class TowerBuilderTest {
 
     private TowerBuilder towerBuilder;
@@ -18,7 +20,7 @@ public class TowerBuilderTest {
         int numberOfLevels = 1;
 
         // when
-        towerBuilder.build(numberOfLevels);
+        List<String> tower = towerBuilder.build(numberOfLevels);
     }
 
 }
