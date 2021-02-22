@@ -30,4 +30,17 @@ public class TowerBuilderTest {
         assertThat(tower).hasSize(1);
     }
 
+    @Test
+    @DisplayName("given one level tower list should contain the single level")
+    void givenOneLevel_build_shouldReturnListWithSingleLevel() {
+        // given
+        int numberOfLevels = 1;
+
+        // when
+        List<String> tower = towerBuilder.build(numberOfLevels);
+
+        // then
+        assertThat(tower).containsExactly("*");
+    }
+
 }
