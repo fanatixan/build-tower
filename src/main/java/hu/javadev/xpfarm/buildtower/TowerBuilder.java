@@ -35,7 +35,7 @@ public class TowerBuilder {
     }
 
     private int width(int numberOfLevels) {
-        return numberOfLevels * 2 - 1;
+        return levelWidth(numberOfLevels);
     }
 
 }

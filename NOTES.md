@@ -11,7 +11,7 @@ Test Cases:
    * 
   ***
   ```
-- 3 floors --> result equals to
+- ✅ 3 floors --> result equals to
   ```text
     *  
    *** 
