@@ -14,8 +14,12 @@ public class TowerBuilder {
 
     private String level(int numberOfLevels, int level) {
         final String margin = margin(numberOfLevels, level);
-        final String levelBlocks = "*".repeat(levelWidth(level));
+        final String levelBlocks = levelBlocks(level);
         return margin + levelBlocks + margin;
+    }
+
+    private String levelBlocks(int level) {
+        return "*".repeat(levelWidth(level));
     }
 
     private String margin(int numberOfLevels, int level) {
