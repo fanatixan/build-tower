@@ -8,11 +8,15 @@ public class TowerBuilder {
     public List<String> build(int numberOfLevels) {
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= numberOfLevels; i++) {
-            final int marginWidth = (toWidth(numberOfLevels) - toLevelWidth(i)) / 2;
+            final int marginWidth = toMarginWidth(numberOfLevels, i);
             final String level = " ".repeat(marginWidth) + "*".repeat(toLevelWidth(i)) + " ".repeat(marginWidth);
             result.add(level);
         }
         return result;
+    }
+
+    private int toMarginWidth(int numberOfLevels, int level) {
+        return (toWidth(numberOfLevels) - toLevelWidth(level)) / 2;
     }
 
     private int toLevelWidth(int level) {
