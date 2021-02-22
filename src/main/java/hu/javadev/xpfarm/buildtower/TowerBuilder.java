@@ -1,16 +1,15 @@
 package hu.javadev.xpfarm.buildtower;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class TowerBuilder {
 
     public List<String> build(int numberOfLevels) {
-        List<String> result = new ArrayList<>();
-        for (int i = 1; i <= numberOfLevels; i++) {
-            result.add(level(numberOfLevels, i));
-        }
-        return result;
+        return IntStream.rangeClosed(1, numberOfLevels)
+                .mapToObj(level -> level(numberOfLevels, level))
+                .collect(Collectors.toList());
     }
 
     private String level(int numberOfLevels, int level) {
