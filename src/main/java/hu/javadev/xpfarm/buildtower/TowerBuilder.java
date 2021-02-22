@@ -8,8 +8,7 @@ public class TowerBuilder {
     public List<String> build(int numberOfLevels) {
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= numberOfLevels; i++) {
-            final String level = level(numberOfLevels, i);
-            result.add(level);
+            result.add(level(numberOfLevels, i));
         }
         return result;
     }
