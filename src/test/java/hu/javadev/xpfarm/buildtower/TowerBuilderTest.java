@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class TowerBuilderTest {
 
     private TowerBuilder towerBuilder;
@@ -21,6 +23,9 @@ public class TowerBuilderTest {
 
         // when
         List<String> tower = towerBuilder.build(numberOfLevels);
+
+        // then
+        assertThat(tower).hasSize(1);
     }
 
 }
