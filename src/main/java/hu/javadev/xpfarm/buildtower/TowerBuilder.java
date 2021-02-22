@@ -5,7 +5,7 @@ import java.util.List;
 public class TowerBuilder {
 
     public List<String> build(int numberOfLevels) {
-        return null;
+        return List.of("");
     }
 
 }
